@@ -1,6 +1,6 @@
-# BlokSpace - Classic Paintball Game
+# BlokSpace - Classic Game
 
-Sebuah game paintball klasik yang dibuat dengan HTML5, CSS3, dan JavaScript vanilla. Game ini menampilkan gameplay retro dengan visual modern dan responsif.
+Sebuah game klasik yang dibuat dengan HTML5, CSS3, dan JavaScript vanilla. Game ini menampilkan gameplay retro dengan visual modern dan responsif.
 
 ## 🎮 Fitur Game
 
