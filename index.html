@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlokSpace - Classic Paintball Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Header -->
+        <header class="game-header">
+            <h1 class="game-title">BlokSpace</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">Score:</span>
+                    <span id="score" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Lives:</span>
+                    <span id="lives" class="stat-value">3</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Level:</span>
+                    <span id="level" class="stat-value">1</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Game Canvas -->
+        <div class="game-screen">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div id="gameOverScreen" class="game-over-screen hidden">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="btn btn-primary">Play Again</button>
+            </div>
+            <div id="pauseScreen" class="pause-screen hidden">
+                <h2>Game Paused</h2>
+                <p>Press SPACE or tap Resume to continue</p>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <div class="control-group">
+                <button id="pauseBtn" class="btn btn-secondary">
+                    <span class="btn-icon">⏸️</span>
+                    <span class="btn-text">Pause</span>
+                </button>
+                <button id="resetBtn" class="btn btn-secondary">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Reset</span>
+                </button>
+                <button id="muteBtn" class="btn btn-secondary">
+                    <span class="btn-icon">🔊</span>
+                    <span class="btn-text">Sound</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Controls (Gameboy Style) -->
+        <div class="mobile-controls">
+            <div class="dpad">
+                <button class="dpad-btn dpad-up" data-key="up">▲</button>
+                <button class="dpad-btn dpad-left" data-key="left">◀</button>
+                <button class="dpad-btn dpad-center"></button>
+                <button class="dpad-btn dpad-right" data-key="right">▶</button>
+                <button class="dpad-btn dpad-down" data-key="down">▼</button>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn action-a" data-key="shoot">A</button>
+                <button class="action-btn action-b" data-key="special">B</button>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <div class="instruction-group">
+                <h3>PC Controls:</h3>
+                <p>WASD/Arrow Keys: Move | Space: Shoot | P: Pause | R: Reset</p>
+            </div>
+            <div class="instruction-group">
+                <h3>Mobile:</h3>
+                <p>Use D-Pad to move | A: Shoot | B: Special</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>&copy; <span id="currentYear">2025</span> KingSyah</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
